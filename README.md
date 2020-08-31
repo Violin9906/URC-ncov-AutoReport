@@ -12,9 +12,30 @@
 
 ## 更新记录
 
+- 20200831：随机User-Agent防止被ban，增加一键本地crontab打卡。随机打卡时间，工作时间每小时打卡
 - 20200831：增强稳定性
 - 20200827：增加打卡失败重试功能，增加License
 - 20200826：为配合学校最新规定，切换至Github Actions实现一天三次打卡
+
+
+
+## 本地使用方法，如果你不信任github workflow
+
+要在本地运行测试，需要安装python 3。我们假设您已经安装了python 3和pip 3，并已将其路径添加到环境变量。
+
+### 安装依赖
+
+```shell
+pip install -r requirements.txt
+```
+
+### 运行打卡程序
+
+```shell
+python set_crontab.py [STUID] [PASSWORD]
+```
+
+其中，`[STUID]`是学号，`[PASSWORD]`是统一身份认证的密码明文。
 
 ## 使用方法
 
